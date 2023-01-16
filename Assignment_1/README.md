@@ -1,7 +1,7 @@
-# Assignment_3_build
+# Assignment_1_build
 ### Test assignment for CadExchanger
 
-A programm that implements classes of lines and ellipses and calculates their points and derivates at the parameter t.  
+A program that implements classes of lines and ellipses and calculates their points and derivates at the parameter t.  
 These curves are implemented inheriting an abstract supercalss ACurve2D. 
 The programm populates a vector of curves interchangeably between ellipses and lines with generated random parameters (I decided against initializing a random() with a time seed for the sake of reproducibility of the values).
 
