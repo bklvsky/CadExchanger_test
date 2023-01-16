@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 2.8)
+
+project(triangle_area)
+
+if (WIN32)
+	message("Building for Windows...")
+else()
+	message("Building for Unix system...")
+endif()
+
+
+include_directories(include)		# Расположение заголовочных файлов
+
+set(SOURCE_LIB src/triangle_area.cpp)		# Установка переменной со списком исходников
+
+add_library(triangle_area SHARED ${SOURCE_LIB})   # Создание статической библиотеки

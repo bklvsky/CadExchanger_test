@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 2.8) 
+
+if (WIN32)
+	message("Building for Windows...")
+    set (CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+    set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+else()
+	message("Building for Unix system...")
+endif()
+
+project(triangle)
+
+set(SOURCE_EXE main.cpp)
+
+include_directories(lib/include)
+
+add_subdirectory(lib)
+
+add_executable(triangle ${SOURCE_EXE})
+
+target_link_libraries(triangle triangle_area)
