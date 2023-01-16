@@ -13,19 +13,19 @@ double randomDouble(double lowerBound, double upperBound)
 	return (lowerBound + delta * ((double)random() / RAND_MAX));
 }
 
-int getArgs(int argc, char **argv, int& curvesNum, double& maxT)
+int getArgs(int argc, char **argv, int& curvesNum, double& maxParam)
 {
 	if (argc != 3) {
 		std::cout << "Usage:" << std::endl;
 		std::cout << "./curves [number_of_curves_to_evaluate]" 
-				<< " [max_size_of_t]." << std::endl;
+				<< " [max_curve_parameter_value]." << std::endl;
 		return -1;
 	}
 	curvesNum = atoi(argv[1]);
-	maxT = atof(argv[2]);
-	if (curvesNum <= 0 || maxT <= 0.) {
+	maxParam = atof(argv[2]);
+	if (curvesNum <= 0 || maxParam <= 0.) {
 		std::cout << "[number_of_curves_to_evaluate] and "
-				<< "[max_size_of_t]"
+				<< "[max_curve_parameter_value]"
 				<< "should be positive numbers." << std::endl;
 		return -1;
 	}
@@ -35,9 +35,9 @@ int getArgs(int argc, char **argv, int& curvesNum, double& maxT)
 int main(int argc, char **argv) 
 {
 	int curvesNum;
-	double maxT;
+	double maxParam;
 
-	if (getArgs(argc, argv, curvesNum, maxT) < 0) {
+	if (getArgs(argc, argv, curvesNum, maxParam) < 0) {
 		return 1;
 	}
 
@@ -45,8 +45,8 @@ int main(int argc, char **argv)
 	std::vector<ACurve2D *> vct;
 	for (int i = 0; i < curvesNum; i++)
 	{
-		double param_1 = randomDouble(1., maxT);
-		double param_2 = randomDouble(1., maxT);
+		double param_1 = randomDouble(1., maxParam);
+		double param_2 = randomDouble(1., maxParam);
 		ACurve2D *curve;
 		if (i % 2 == 0)
 			curve = new Line2D(param_1, param_2);
