@@ -9,7 +9,7 @@ More detailed descriptions can be found in the corresponding directories.
 **Summary:** I learned to build and use CadExchanger SDK, researched its documentation. As I have extensive prior experience with 3D modelling programmes as a user, it was definitely exciting to code a little 3D modelling app and to know how it works from the inside.  
 
 ### Assignment 3
-**Summary:** I learned how to use CMake tool (finally! I have postponed for so long; it will make my life so much easier). As I usually develop projects almost exclusive under Linux, it was very useful to learn more about crossplatform building process, especially for Windows as it is very different from what I'm used to.  
+**Summary:** I learned how to use CMake tool (finally! I have postponed it for so long; it will make my life so much easier). As I usually develop projects almost exclusively under Linux, it was very useful to learn more about crossplatform building process, especially for Windows as it is very different from what I'm used to.  
 
 ### Assignment 5
 **Summary:** I've chosen maybe not my most sophisticated project but the one I had the most fun doing. It's a little game in C with a pseudo 3D representation of a maze, where I worked with textures, user-hooks, configuration files, etc.  
